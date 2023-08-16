@@ -32,7 +32,7 @@ You can easily reproduce the results from the paper by running the provided scri
 sh run_main.sh
 ```
 
-Similarly, you can specify separate scripts to run independent tasks, such as obtaining results on ethh1:
+Similarly, you can specify separate scripts to run independent tasks, such as obtaining results on etth1:
 
 ```
 sh script/SegRNN/etth1.sh
