@@ -5,7 +5,7 @@ from exp.exp_main import Exp_Main
 import random
 import numpy as np
 
-parser = argparse.ArgumentParser(description='Autoformer & Transformer family for Time Series Forecasting')
+parser = argparse.ArgumentParser(description='Model family for Time Series Forecasting')
 
 # random seed
 parser.add_argument('--random_seed', type=int, default=2024, help='random seed')
@@ -37,7 +37,7 @@ parser.add_argument('--rnn_type', default='gru', help='rnn_type')
 parser.add_argument('--dec_way', default='pmf', help='decode way')
 parser.add_argument('--seg_len', type=int, default=48, help='segment length')
 parser.add_argument('--win_len', type=int, default=48, help='windows length')
-parser.add_argument('--channel_id', type=int, default=1, help='windows length')
+parser.add_argument('--channel_id', type=int, default=1, help='Whether to enable channel position encoding')
 
 # DLinear
 #parser.add_argument('--individual', action='store_true', default=False, help='DLinear: a linear layer for each variate(channel) individually')

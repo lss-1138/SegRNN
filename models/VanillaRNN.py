@@ -4,6 +4,10 @@ from layers.RevIN import RevIN
 
 
 class Model(nn.Module):
+    """
+     VanillaRNN is the most direct and traditional method for time series prediction using RNN-class methods.
+     It completes multi-variable long time series prediction through multi-variable point-wise input and cyclic prediction.
+     """
     def __init__(self, configs):
         super(Model, self).__init__()
 

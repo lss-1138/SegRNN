@@ -133,7 +133,7 @@ class Exp_Main(Exp_Basic):
 
             self.model.train()
             epoch_time = time.time()
-            max_memory = 0
+            # max_memory = 0
             for i, (batch_x, batch_y, batch_x_mark, batch_y_mark) in enumerate(train_loader):
                 iter_count += 1
                 model_optim.zero_grad()
@@ -195,8 +195,8 @@ class Exp_Main(Exp_Basic):
                     loss.backward()
                     model_optim.step()
 
-                current_memory = torch.cuda.max_memory_allocated() / 1024 ** 2
-                max_memory = max(max_memory, current_memory)
+                # current_memory = torch.cuda.max_memory_allocated() / 1024 ** 2
+                # max_memory = max(max_memory, current_memory)
 
                 if self.args.lradj == 'TST':
                     adjust_learning_rate(model_optim, scheduler, epoch + 1, self.args, printout=False)
@@ -223,7 +223,7 @@ class Exp_Main(Exp_Basic):
         best_model_path = path + '/' + 'checkpoint.pth'
         self.model.load_state_dict(torch.load(best_model_path))
 
-        print(f"Max Memory (MB): {max_memory}")
+        # print(f"Max Memory (MB): {max_memory}")
 
         return self.model
 
