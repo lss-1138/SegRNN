@@ -6,7 +6,7 @@ class Model(nn.Module):
     SegRNN is an innovative RNN-based model designed for Long-term Time Series Forecasting (LTSF). It incorporates two fundamental
 strategies:
         (i) the replacement of point-wise iterations with segment-wise iterations
-        (2)  the substitution of Recurrent Multi-step Forecasting (RMF) with Parallel Multi-step Forecasting (PMF)
+        (ii)  the substitution of Recurrent Multi-step Forecasting (RMF) with Parallel Multi-step Forecasting (PMF)
     """
     def __init__(self, configs):
         super(Model, self).__init__()
