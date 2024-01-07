@@ -48,7 +48,7 @@ parser.add_argument('--head_dropout', type=float, default=0.0, help='head dropou
 parser.add_argument('--patch_len', type=int, default=16, help='patch length')
 parser.add_argument('--stride', type=int, default=8, help='stride')
 parser.add_argument('--padding_patch', default='end', help='None: None; end: padding on the end')
-parser.add_argument('--revin', type=int, default=1, help='RevIN; True 1 False 0')
+parser.add_argument('--revin', type=int, default=0, help='RevIN; True 1 False 0')
 parser.add_argument('--affine', type=int, default=0, help='RevIN-affine; True 1 False 0')
 parser.add_argument('--subtract_last', type=int, default=0, help='0: subtract mean; 1: subtract last')
 parser.add_argument('--decomposition', type=int, default=0, help='decomposition; True 1 False 0')
