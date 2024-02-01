@@ -9,7 +9,7 @@ strategies:
 
 By combining these two strategies, SegRNN achieves state-of-the-art results with just **a single layer of GRU**, making it extremely lightweight and efficient.
 
-![image](Figures/Table 2.png)
+![image](Figures/Table2.png)
 
 Lots of readers have inquired about why there is a significant difference between the MSE and MAE metrics for Traffic data in the paper. 
 This is because the presence of outlier extreme values in the Traffic data amplifies the MSE error. 
