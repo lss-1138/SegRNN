@@ -81,7 +81,7 @@ class Model(nn.Module):
             x = (x - seq_last).permute(0, 2, 1) # b,c,s
 
         # segment and embedding    b,c,s -> bc,n,w -> bc,n,d
-        x = self.valueEmbedding(x.view(-1, self.seg_num_x, self.seg_len))
+        x = self.valueEmbedding(x.reshape(-1, self.seg_num_x, self.seg_len))
 
         # encoding
         if self.rnn_type == "lstm":
@@ -179,7 +179,7 @@ Concise version implementation that only includes necessary code
 #         x = (x - seq_last).permute(0, 2, 1) # b,c,s
 #
 #         # segment and embedding    b,c,s -> bc,n,w -> bc,n,d
-#         x = self.valueEmbedding(x.view(-1, self.seg_num_x, self.seg_len))
+#         x = self.valueEmbedding(x.reshape(-1, self.seg_num_x, self.seg_len))
 #
 #         # encoding
 #         _, hn = self.rnn(x) # bc,n,d  1,bc,d
