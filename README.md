@@ -7,6 +7,8 @@ strategies:
 1. The replacement of point-wise iterations with segment-wise iterations
 2. The substitution of Recurrent Multi-step Forecasting (RMF) with Parallel Multi-step Forecasting (PMF)
 
+![image](Figures/Figure4.png)
+
 By combining these two strategies, SegRNN achieves state-of-the-art results with just **a single layer of GRU**, making it extremely lightweight and efficient.
 
 ![image](Figures/Table2.png)
@@ -50,6 +52,19 @@ You can reproduce the results of the ablation learning by using other instructio
 
 ```
 sh scripts/SegRNN/ablation/rnn_variants.sh
+```
+
+## Citation
+If you find this repo useful, please cite our paper.
+```
+@misc{lin2023segrnn,
+      title={SegRNN: Segment Recurrent Neural Network for Long-Term Time Series Forecasting}, 
+      author={Shengsheng Lin and Weiwei Lin and Wentai Wu and Feiyu Zhao and Ruichao Mo and Haotong Zhang},
+      year={2023},
+      eprint={2308.11200},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
 
 ## Acknowledgement
