@@ -1,7 +1,10 @@
-# SegRNN 
-
+# SegRNN
 Welcome to the official repository of the SegRNN paper: "[Segment Recurrent Neural Network for Long-Term Time Series Forecasting.](https://arxiv.org/abs/2308.11200)"
 
+## Updates
+🚩 **News** (2024.04) SegRNN has been included in [[Time-Series-Library]](https://github.com/thuml/Time-Series-Library) and serves as the only RNN-based baseline.
+
+## Introduction
 SegRNN is an innovative RNN-based model designed for Long-term Time Series Forecasting (LTSF). It incorporates two fundamental
 strategies:
 1. The replacement of point-wise iterations with segment-wise iterations
