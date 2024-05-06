@@ -63,13 +63,11 @@ sh scripts/SegRNN/ablation/rnn_variants.sh
 ## Citation
 If you find this repo useful, please cite our paper.
 ```
-@misc{lin2023segrnn,
-      title={SegRNN: Segment Recurrent Neural Network for Long-Term Time Series Forecasting}, 
-      author={Shengsheng Lin and Weiwei Lin and Wentai Wu and Feiyu Zhao and Ruichao Mo and Haotong Zhang},
-      year={2023},
-      eprint={2308.11200},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{lin2023segrnn,
+  title={Segrnn: Segment recurrent neural network for long-term time series forecasting},
+  author={Lin, Shengsheng and Lin, Weiwei and Wu, Wentai and Zhao, Feiyu and Mo, Ruichao and Zhang, Haotong},
+  journal={arXiv preprint arXiv:2308.11200},
+  year={2023}
 }
 ```
 
