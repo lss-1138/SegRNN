@@ -2,7 +2,7 @@
 Welcome to the official repository of the SegRNN paper: "[Segment Recurrent Neural Network for Long-Term Time Series Forecasting.](https://arxiv.org/abs/2308.11200)"
 
 ## Updates
-🚩 **News** (2024.05) Another one of our recent works, [SparseTSF](https://github.com/lss-1138/SparseTSF) has been accepted as a paper at **ICML 2024**.
+🚩 **News** (2024.06) Another one of our recent works, [SparseTSF](https://github.com/lss-1138/SparseTSF) has been accepted as an **_Oral_ paper at ICML 2024**.
 As an ultra-lightweight LTSF model, it achieves near state-of-the-art performance with less than **_1k_** parameters.
 
 🚩 **News** (2024.04) SegRNN has been included in [[Time-Series-Library]](https://github.com/thuml/Time-Series-Library) and serves as the only RNN-based baseline.
