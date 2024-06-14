@@ -2,9 +2,9 @@
 Welcome to the official repository of the SegRNN paper: "[Segment Recurrent Neural Network for Long-Term Time Series Forecasting.](https://arxiv.org/abs/2308.11200)"
 
 ## Updates
-🚩 **News** (2024.06) We have fixed a long-standing bug in the code framework and updated SegRNN's performance in shorter lookback windows (L=96) in this table, demonstrating that SegRNN still achieves state-of-the-art performance in this case.
+🚩 **News** (2024.06) We have fixed a long-standing bug (see description in [FITS](https://github.com/VEWOXIC/FITS) and [TFB](https://github.com/decisionintelligence/TFB) ) in the code framework and updated SegRNN's performance in shorter lookback windows (L=96) in [this table](https://github.com/lss-1138/SegRNN/blob/main/README.md#comparison-results-for-lookback-l--96), demonstrating that SegRNN still achieves **state-of-the-art** performance in this case.
 
-🚩 **News** (2024.05) Another one of our recent works, [SparseTSF](https://github.com/lss-1138/SparseTSF) has been accepted as an **_Oral_ paper at ICML 2024**.
+🚩 **News** (2024.05) Another one of our recent works, [SparseTSF](https://github.com/lss-1138/SparseTSF) has been accepted as an **_Oral_ paper at ICML 2024 (acceptance rate less than 1.5%**).
 As an ultra-lightweight LTSF model, it achieves near state-of-the-art performance with less than **_1k_** parameters.
 
 🚩 **News** (2024.04) SegRNN has been included in [[Time-Series-Library]](https://github.com/thuml/Time-Series-Library) and serves as the only RNN-based baseline.
@@ -81,11 +81,11 @@ If you find this repo useful, please cite our paper.
 
 ## Comparison Results for Lookback L = 96
 
-There was a longstanding bug in our current framework where the last batch of data was discarded during the testing phase (i.e., `drop_last = False`). This might have affected the model's performance, especially when using a large batch size on small datasets. We have now fixed this issue (see `data_provider/data_factory.py` and `exp\exp_main.py`).
+There was a longstanding bug in our current framework where the last batch of data was discarded during the testing phase (i.e., `drop_last = False`). This might have affected the model's performance, especially when using a large batch size on small datasets. We have now fixed this issue (see [data_provider/data_factory.py](https://github.com/lss-1138/SegRNN/blob/d1302489e5234dce2085a356b56b934f14b1e338/data_provider/data_factory.py#L19) and [exp/exp_main.py](https://github.com/lss-1138/SegRNN/blob/d1302489e5234dce2085a356b56b934f14b1e338/exp/exp_main.py#L305)).
 
-In addition, many recent works have tested their models' performance with a Lookback of L = 96. To investigate SegRNN’s performance with a shorter input window, we reran SegRNN using MSE as the loss function under the fixed framework (the run script is located in `scripts/SegRNN/Lookback_96`).
+In addition, many recent works have tested their models' performance with a Lookback of L = 96. To investigate SegRNN’s performance with a shorter input window, we reran SegRNN using MSE as the loss function under the fixed framework (the run script is located in [scripts/SegRNN/Lookback_96](https://github.com/lss-1138/SegRNN/tree/main/scripts/SegRNN/Lookback_96)).
 
-The comparison results below indicate that SegRNN still achieves state-of-the-art performance with a Lookback of 96. (Results for models other than SegRNN are taken from iTransformer.)
+The comparison results below indicate that SegRNN still achieves state-of-the-art performance with a Lookback of 96. (Results for models other than SegRNN are taken from [iTransformer](https://arxiv.org/pdf/2310.06625).)
 
 
 |  |  | SegRNN |  | iTransformer |  | TimesNet |  | PatchTST |  | Crossformer |  | DLinear |  | FEDformer |  |
