@@ -85,7 +85,7 @@ parser.add_argument('--batch_size', type=int, default=128, help='batch size of t
 parser.add_argument('--patience', type=int, default=5, help='early stopping patience')
 parser.add_argument('--learning_rate', type=float, default=0.0001, help='optimizer learning rate')
 parser.add_argument('--des', type=str, default='test', help='exp description')
-parser.add_argument('--loss', type=str, default='mse', help='loss function')
+parser.add_argument('--loss', type=str, default='mae', help='loss function')
 parser.add_argument('--lradj', type=str, default='type3', help='adjust learning rate')
 parser.add_argument('--pct_start', type=float, default=0.3, help='pct_start')
 parser.add_argument('--use_amp', action='store_true', help='use automatic mixed precision training', default=False)
@@ -122,7 +122,7 @@ Exp = Exp_Main
 if args.is_training:
     for ii in range(args.itr):
         # setting record of experiments
-        setting = '{}_{}_{}_ft{}_sl{}_pl{}_dm{}_dr{}_rt{}_dw{}_sl{}_{}_{}'.format(
+        setting = '{}_{}_{}_ft{}_sl{}_pl{}_dm{}_dr{}_rt{}_dw{}_sl{}_{}_{}_{}'.format(
             args.model_id,
             args.model,
             args.data,
@@ -134,6 +134,7 @@ if args.is_training:
             args.rnn_type,
             args.dec_way,
             args.seg_len,
+            args.loss,
             args.des,ii)
 
         exp = Exp(args)  # set experiments
@@ -150,7 +151,7 @@ if args.is_training:
         torch.cuda.empty_cache()
 else:
     ii = 0
-    setting = '{}_{}_{}_ft{}_sl{}_pl{}_dm{}_dr{}_rt{}_dw{}_sl{}_{}_{}'.format(
+    setting = '{}_{}_{}_ft{}_sl{}_pl{}_dm{}_dr{}_rt{}_dw{}_sl{}_{}_{}_{}'.format(
         args.model_id,
         args.model,
         args.data,
@@ -162,6 +163,7 @@ else:
         args.rnn_type,
         args.dec_way,
         args.seg_len,
+        args.loss,
         args.des, ii)
 
     exp = Exp(args)  # set experiments
