@@ -2,7 +2,7 @@
 Welcome to the official repository of the SegRNN paper: "[Segment Recurrent Neural Network for Long-Term Time Series Forecasting.](https://arxiv.org/abs/2308.11200)"
 
 ## Updates
-🚩 **News** (2024.06) We have fixed a long-standing bug (see description in [FITS](https://github.com/VEWOXIC/FITS) and [TFB](https://github.com/decisionintelligence/TFB) ) in the code framework and updated SegRNN's performance in shorter lookback windows (L=96) in [this table](https://github.com/lss-1138/SegRNN/blob/main/README.md#comparison-results-for-lookback-l--96), demonstrating that SegRNN still achieves **state-of-the-art** performance in this case.
+🚩 **News** (2024.06) We have fixed a long-standing bug (see description in [FITS](https://github.com/VEWOXIC/FITS) and [TFB](https://github.com/decisionintelligence/TFB) ) in the code framework and updated SegRNN's performance in shorter lookback windows (L=96) in [this table](https://github.com/lss-1138/SegRNN?tab=readme-ov-file#comparison-results-for-lookback-l--96), demonstrating that SegRNN still achieves **state-of-the-art** performance in this case.
 
 🚩 **News** (2024.05) Another one of our recent works, [SparseTSF](https://github.com/lss-1138/SparseTSF) has been accepted as an **_Oral_ paper at ICML 2024 (acceptance rate less than 1.5%**).
 As an ultra-lightweight LTSF model, it achieves near state-of-the-art performance with less than **_1k_** parameters.
