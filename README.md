@@ -2,7 +2,9 @@
 Welcome to the official repository of the SegRNN paper: "[Segment Recurrent Neural Network for Long-Term Time Series Forecasting.](https://arxiv.org/abs/2308.11200)"
 
 ## Updates
-🚩 **News** (2024.09) Another one of our recent works, [CycleNet](https://github.com/ACAT-SCUT/CycleNet) has been accepted as **NeurIPS 2024 Spotlight**.
+🚩 **News** (2024.10): SegRNN will soon be included in [[PyPOTS]](https://github.com/WenjieDu/PyPOTS), a widely acclaimed and popular repository dedicated to multivariate partially-observed time series with missing values.
+
+🚩 **News** (2024.09) Another one of our recent works, [CycleNet](https://github.com/ACAT-SCUT/CycleNet) has been accepted as **NeurIPS 2024 _Spotlight_**.
 CycleNet pioneers the exploration of **explicitly modeling periodic patterns** in time-series data through _**learnable** recurrent cycles_ to enhance the accuracy of time series forecasting tasks.
 
 🚩 **News** (2024.06) We have fixed a long-standing bug (see description in [FITS](https://github.com/VEWOXIC/FITS) and [TFB](https://github.com/decisionintelligence/TFB) ) in the code framework and updated SegRNN's performance in shorter lookback windows (L=96) in [this table](https://github.com/lss-1138/SegRNN?tab=readme-ov-file#comparison-results-for-lookback-l--96), demonstrating that SegRNN still achieves **state-of-the-art** performance in this case.
