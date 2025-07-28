@@ -36,7 +36,6 @@ parser.add_argument('--pred_len', type=int, default=96, help='prediction sequenc
 parser.add_argument('--rnn_type', default='gru', help='rnn_type')
 parser.add_argument('--dec_way', default='pmf', help='decode way')
 parser.add_argument('--seg_len', type=int, default=48, help='segment length')
-parser.add_argument('--win_len', type=int, default=48, help='windows length')
 parser.add_argument('--channel_id', type=int, default=1, help='Whether to enable channel position encoding')
 
 # DLinear
@@ -85,7 +84,7 @@ parser.add_argument('--batch_size', type=int, default=128, help='batch size of t
 parser.add_argument('--patience', type=int, default=5, help='early stopping patience')
 parser.add_argument('--learning_rate', type=float, default=0.0001, help='optimizer learning rate')
 parser.add_argument('--des', type=str, default='test', help='exp description')
-parser.add_argument('--loss', type=str, default='mae', help='loss function')
+parser.add_argument('--loss', type=str, default='mse', help='loss function')
 parser.add_argument('--lradj', type=str, default='type3', help='adjust learning rate')
 parser.add_argument('--pct_start', type=float, default=0.3, help='pct_start')
 parser.add_argument('--use_amp', action='store_true', help='use automatic mixed precision training', default=False)

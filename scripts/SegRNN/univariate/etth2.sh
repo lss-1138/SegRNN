@@ -1,12 +1,12 @@
-
 model_name=SegRNN
+seq_len=720
 
 root_path_name=./dataset/
-data_path_name=weather.csv
-model_id_name=weather
-data_name=custom
+data_path_name=ETTh2.csv
+model_id_name=ETTh2
+data_name=ETTh2
 
-seq_len=720
+
 for pred_len in 96 192 336 720
 do
     python -u run_longExp.py \
@@ -16,18 +16,17 @@ do
       --model_id $model_id_name'_'$seq_len'_'$pred_len \
       --model $model_name \
       --data $data_name \
-      --features M \
+      --features S \
       --seq_len $seq_len \
       --pred_len $pred_len \
-      --seg_len 48 \
-      --enc_in 21 \
-      --d_model 512 \
+      --seg_len 24 \
+      --enc_in 1 \
+      --d_model 128 \
       --dropout 0.1 \
       --train_epochs 30 \
       --patience 5 \
       --rnn_type gru \
       --dec_way pmf \
-      --channel_id 1 \
-      --revin 1 \
-      --itr 1 --batch_size 128 --learning_rate 0.0001
+      --channel_id 0 \
+      --itr 1 --batch_size 64 --learning_rate 0.0003
 done

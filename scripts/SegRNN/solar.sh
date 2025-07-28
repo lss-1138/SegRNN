@@ -2,9 +2,10 @@
 model_name=SegRNN
 
 root_path_name=./dataset/
-data_path_name=weather.csv
-model_id_name=weather
-data_name=custom
+data_path_name=solar_AL.txt
+model_id_name=Solar
+data_name=Solar
+
 
 seq_len=720
 for pred_len in 96 192 336 720
@@ -20,14 +21,15 @@ do
       --seq_len $seq_len \
       --pred_len $pred_len \
       --seg_len 48 \
-      --enc_in 21 \
+      --enc_in 137 \
       --d_model 512 \
-      --dropout 0.1 \
+      --dropout 0.5 \
       --train_epochs 30 \
       --patience 5 \
       --rnn_type gru \
       --dec_way pmf \
       --channel_id 1 \
-      --revin 1 \
-      --itr 1 --batch_size 128 --learning_rate 0.0001
+      --revin 0 \
+      --itr 1 --batch_size 64 --learning_rate 0.0003
 done
+

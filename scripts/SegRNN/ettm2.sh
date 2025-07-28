@@ -1,10 +1,3 @@
-if [ ! -d "./logs" ]; then
-    mkdir ./logs
-fi
-
-if [ ! -d "./logs/LongForecasting" ]; then
-    mkdir ./logs/LongForecasting
-fi
 model_name=SegRNN
 
 root_path_name=./dataset/
@@ -30,10 +23,9 @@ do
       --d_model 512 \
       --dropout 0.5 \
       --train_epochs 30 \
-      --patience 10 \
+      --patience 5 \
       --rnn_type gru \
       --dec_way pmf \
-      --channel_id 1 \
-      --itr 1 --batch_size 256 --learning_rate 0.0001 > logs/LongForecasting/$model_name'_'$model_id_name'_'$seq_len'_'$pred_len.log
+      --channel_id 0 \
+      --itr 1 --batch_size 256 --learning_rate 0.0003
 done
-
