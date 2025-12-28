@@ -2,6 +2,9 @@
 Welcome to the official repository of the SegRNN paper: "[Segment Recurrent Neural Network for Long-Term Time Series Forecasting.](https://arxiv.org/abs/2308.11200)"
 
 ## Updates
+🚩 **News** (2025.12): Congratulation! **SegRNN** has been officially accepted by **IEEE Internet of Things Journal (IoT-J)**.  
+The final version is available on IEEE Xplore: https://ieeexplore.ieee.org/document/11313095
+
 🚩 **News** (2024.10): SegRNN has been included in [[PyPOTS]](https://github.com/WenjieDu/PyPOTS), a widely acclaimed and popular repository dedicated to multivariate _partially-observed time series_ with missing values.
 
 🚩 **News** (2024.09) Another one of our recent works, [CycleNet](https://github.com/ACAT-SCUT/CycleNet) has been accepted as **NeurIPS 2024 _Spotlight_**.
