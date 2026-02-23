@@ -77,11 +77,15 @@ sh scripts/SegRNN/ablation/rnn_variants.sh
 ## Citation
 If you find this repo useful, please cite our paper.
 ```
-@article{lin2025segrnn,
+@article{lin2026segrnn,
   title={Segrnn: Segment recurrent neural network for long-term time series forecasting},
   author={Lin, Shengsheng and Lin, Weiwei and Wu, Wentai and Zhao, Feiyu and Mo, Ruichao and Zhang, Haotong},
   journal={IEEE Internet of Things Journal},
-  year={2025},
+  year={2026},
+  volume={13},
+  number={5},
+  pages={9861-9871},
+  doi={10.1109/JIOT.2025.3647705},
   publisher={IEEE}
 }
 ```
